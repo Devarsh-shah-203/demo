@@ -1,16 +1,16 @@
-import asyncHandler from "../../../Hospital-management-system/backend/src/utils/asyncHandler.js";
-import ApiResponse from "../../../Hospital-management-system/backend/src/utils/ApiResponse.js";
+import asyncHandler from "../utils/asyncHandler.js";
+import ApiResponse from "../utils/ApiResponse.js";
 
 import {
   registerUser,
   loginUser,
   logoutUser,
-} from "../../../Hospital-management-system/backend/src/services/auth.service.js";
+} from "/services/auth.service.js";
 
 import {
   accessCookieOptions,
   refreshCookieOptions,
-} from "../../../Hospital-management-system/backend/src/utils/cookieOption.js";
+} from "/utils/cookieOption.js";
 
 const register = asyncHandler(async (req, res) => {
   // from frontend recieve username,email,password,phone

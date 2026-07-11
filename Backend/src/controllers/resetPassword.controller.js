@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import User from "../../../Hospital-management-system/backend/src/models/user.model.js";
+import User from "../src/models/user.model.js";
 
 const resetPassword = async (req, res, next) => {
   try {

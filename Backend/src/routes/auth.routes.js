@@ -1,7 +1,7 @@
 import express from 'express'
-import { register,login,logout } from '../../../../auth/src/controllers/auth.controller.js';
-import {verifyOtp,sendVerificationCode}from "../../../../auth/src/controllers/verifymail.js"
-import reset from "../../../../auth/src/controllers/resetPassword.controller.js"
+import { register,login,logout } from '../controllers/auth.controller.js';
+import {verifyOtp,sendVerificationCode}from "../controllers/verifymail.js"
+import reset from "../controllers/resetPassword.controller.js"
 import authenticate from "../middlewares/authenticate.middleware.js"
 
 const router = express.Router();
