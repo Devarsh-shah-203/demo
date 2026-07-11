@@ -3,12 +3,12 @@ import User from "../models/user.model.js";
 
 const authenticate = async (req, res, next) => {
   try {
-<<<<<<< HEAD
+
     // Get token from header
     const authHeader = req.headers.authorization;
    
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
-=======
+
     let token = null;
 
     // 1. Try Authorization Header
@@ -25,7 +25,7 @@ const authenticate = async (req, res, next) => {
 
     // 3. No token
     if (!token) {
->>>>>>> 2e375c146242fe393d4527427418ddf7a35bd99d
+
       return res.status(401).json({
         success: false,
         message: "No token provided. Access denied.",
@@ -48,7 +48,7 @@ const authenticate = async (req, res, next) => {
     req.user = user;
 
     next();
-  } catch (error) {
+  }} catch (error) {
     console.error(error);
 
     if (error.name === "JsonWebTokenError") {
